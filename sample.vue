@@ -2,43 +2,45 @@
 <div id="app">
 	<v-app id="inspire">
 	    <div>
-	    <v-row no-gutters>
-	    <v-card color="black" width="100%">
-	      <div style='text-align:center'>
-	        <span class="time">2020-03-14</span>
-	      </div>
-	    </v-card>
-	    <v-responsive width="100%"></v-responsive>
-	      <template v-for="item in machine">
-	        <v-col :key="item.idx">
-	          <v-card>
-	            <v-row>
-	              <v-toolbar dense flat color="#b5b5b5" height="120">
-	                <span class="f_mname">{{item.mid}}</span>
-	                  <v-spacer></v-spacer>
-	                <span class="f_p">{{item.process}}</span>
-	              </v-toolbar>
-		            </v-row>
-		            <div class="text-center">
-		              <span class="f_end" style="align:center">{{item.timer}}</span>
-		            </div>
-		      	    <v-footer :fixed="true" height="100" absolute class="white">
-		              <v-row>
-		                <v-progress-linear value="15" height="94" 
-	                  color="#357d21" background-color="#828282" rounded>
-	                  <v-flex style="maxWidth:20px"></v-flex>
-	                  <span class="vt">{{ item.count}}</span>
-	                  <v-spacer></v-spacer>
-	                  <span class="vt">
-	                    <div class="text-right">{{ item.fTime }}</div>
-	                  </span>
-	                  <v-flex style="maxWidth:20px"></v-flex>
-		                </v-progress-linear>
-		              </v-row>
-		            </v-footer>
-	          </v-card>
-	        </v-col>
-	      </template>
+			<v-row no-gutters>
+				<v-card color="black" width="100%">
+				  <div style='text-align:center'>
+					<span class="time">2020-03-14</span>
+				  </div>
+				</v-card>
+				<v-responsive width="100%"></v-responsive>
+				<template v-for="item in machine">
+				<v-col :key="item.idx">
+				  <v-card>
+					<v-row>
+					  <v-toolbar dense flat color="#b5b5b5" height="120">
+						<span class="f_mname">{{item.mid}}</span>
+						  <v-spacer></v-spacer>
+						<span class="f_p">{{item.process}}</span>
+					  </v-toolbar>
+					</v-row>
+						<div class="text-center">
+						  <span class="f_end" style="align:center">{{item.timer}}</span>
+						</div>
+						<v-footer :fixed="true" height="100" absolute class="white">
+						  <v-row>
+							<v-progress-linear value="15" height="94"
+						  color="#357d21" background-color="#828282" rounded>
+							  <v-flex style="maxWidth:20px"></v-flex>
+							  <span class="vt">{{ item.count}}</span>
+							  <v-spacer></v-spacer>
+							  <span class="vt">
+								<div class="text-right">{{ item.fTime }}</div>
+							  </span>
+							  <v-flex style="maxWidth:20px"></v-flex>
+							</v-progress-linear>
+						  </v-row>
+						</v-footer>
+				  </v-card>
+				</v-col>
+				</template>
+			</v-row>
+		</div>
 	</v-app>
 </div>
 <!-- HTML 끝 !-->
