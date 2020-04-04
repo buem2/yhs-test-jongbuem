@@ -45,25 +45,66 @@
 
 <style>
 <!-- CSS 시작 !-->
-.time{
-	font-size: 3vw;
+.time {
+	font-size: 20px;
 	color: #f4fc03;
 	text-align: center;
 }
-.f_mname{
-	margin: 30px;
-	font-size: 3vw;
+.f_mname {
+	margin: 20px;
+	font-size: 20px;
+	color: #333;
 }
 .f_p {
-	font-size: 3vh;
-	margin: 20px;
+	font-size: 17px;
+	color: #333;
+	margin: 0 20px;
 }
 .vt {
-	font-size: 4vh;
+	font-size: 20px;
 	color: #ffffff;
 }
 .f_end {
-	font-size: 9vw;
+	font-size: 20px;
+}
+.v-toolbar__content {
+	min-width: 400px;
+}
+.v-sheet.v-sheet--tile.theme--light.v-toolbar.v-toolbar--dense.v-toolbar--flat {
+	height: 85px !important;
+}
+
+.v-toolbar__content {
+	height: 85px !important;
+}
+
+.v-footer--absolute {
+	position: static;
+}
+.v-application .text-center {
+	padding-top: 5px;
+}
+
+@media all and ( min-width:325px ) and ( max-width:480px ) {
+	.v-toolbar__content {
+		min-width: 325px;
+	}
+}
+
+.no-gutters > div:nth-child(4) .v-progress-linear__determinate {
+	background-color: #FF0000 !important;
+}
+.no-gutters > div:nth-child(5) .v-progress-linear__determinate {
+	background-color: #FF5E00 !important;
+}
+.no-gutters > div:nth-child(6) .v-progress-linear__determinate {
+	background-color: #FF5E00 !important;
+}
+.no-gutters > div:nth-child(7) .v-progress-linear__determinate {
+	background-color: #FF0000 !important;
+}
+.no-gutters > div:nth-child(8) .v-progress-linear__determinate {
+	background-color: #FF5E00 !important;
 }
 <!-- CSS 끝 !-->
 </style>
