@@ -94,12 +94,13 @@
 .v-card.v-sheet.theme--light .row {
 	margin:0;
 }
-.row.no-gutters {
-	justify-content: center;
-}
+
 .no-gutters>.col {
-	flex: 0 32%;
-	margin: 0 0.5% 1%;
+	flex: 0 33%;
+	margin-bottom: 0.5%;
+}
+.no-gutters .col:nth-child(3n+1) {
+	margin:0 0.5%;
 }
 
 .no-gutters > div:nth-child(4) .v-progress-linear__determinate {
@@ -171,7 +172,7 @@
 @media all and ( max-width:767px ) {
 	.no-gutters>.col {
 		flex: auto;
-		margin-bottom: 10px;
+		margin-bottom: 10px !important;
 	}
 	.time {
 		font-size: 2.5vw;
