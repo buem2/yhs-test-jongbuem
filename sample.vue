@@ -24,7 +24,7 @@
 							</div>
 							<v-footer :fixed="true" height="100" absolute class="white">
 							  <v-row>
-								<v-progress-linear value="15" height="94"
+								<v-progress-linear value="15" height="100"
 							  color="#357d21" background-color="#828282" rounded>
 								  <v-flex style="maxWidth:20px"></v-flex>
 								  <span class="vt">{{ item.count}}</span>
@@ -48,49 +48,58 @@
 <style>
 <!-- CSS 시작 !-->
 .time {
-	font-size: 20px;
+	font-size: 2.5vw;
 	color: #f4fc03;
 	text-align: center;
 }
 .f_mname {
-	margin: 20px;
-	font-size: 20px;
+	font-size: 2vw;
 	color: #333;
 }
 .f_p {
-	font-size: 17px;
+	font-size: 1.5vw;
 	color: #333;
-	margin: 0 20px;
 }
 .vt {
-	font-size: 20px;
+	font-size: 2vw;
 	color: #ffffff;
 }
 .f_end {
-	font-size: 20px;
-}
-.v-toolbar__content {
-	min-width: 400px;
+	font-size: 2vw;
 }
 .v-sheet.v-sheet--tile.theme--light.v-toolbar.v-toolbar--dense.v-toolbar--flat {
-	height: 85px !important;
+	height: 120px !important;
 }
 
 .v-toolbar__content {
-	height: 85px !important;
+	height: 120px !important;
 }
 
 .v-footer--absolute {
 	position: static;
 }
 .v-application .text-center {
-	padding-top: 5px;
+	height: 90px;
+	line-height: 90px;
 }
-
-@media all and ( min-width:325px ) and ( max-width:480px ) {
-	.v-toolbar__content {
-		min-width: 325px;
-	}
+.v-footer.white.v-sheet.v-sheet--tile.theme--light.v-footer--absolute {
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	height: 140px !important;
+}
+.v-progress-linear.v-progress-linear--rounded.theme--light {
+	height: 140px !important;
+}
+.v-card.v-sheet.theme--light .row {
+	margin:0;
+}
+.row.no-gutters {
+	justify-content: center;
+}
+.no-gutters>.col {
+	flex: 0 32%;
+	margin: 0 0.5% 1%;
 }
 
 .no-gutters > div:nth-child(4) .v-progress-linear__determinate {
@@ -107,6 +116,107 @@
 }
 .no-gutters > div:nth-child(8) .v-progress-linear__determinate {
 	background-color: #FF5E00 !important;
+}
+
+
+
+/* PC */
+@media all and ( min-width:1024px ) and ( max-width:1920px ) {
+	.v-sheet.v-sheet--tile.theme--light.v-toolbar.v-toolbar--dense.v-toolbar--flat {
+		height: 85px !important;
+	}
+	.v-toolbar__content {
+		height: 85px !important;
+	}
+	.v-application .text-center {
+		height: 60px;
+		line-height: 60px;
+	}
+	.v-footer.white.v-sheet.v-sheet--tile.theme--light.v-footer--absolute {
+		height: 100px !important;
+	}
+	.v-progress-linear.v-progress-linear--rounded.theme--light {
+		height: 100px !important;
+	}
+
+}
+
+
+
+/* Tablet */
+@media all and ( min-width:768px ) and ( max-width:1023px ) {
+	.v-sheet.v-sheet--tile.theme--light.v-toolbar.v-toolbar--dense.v-toolbar--flat {
+		height: 70px !important;
+	}
+
+	.v-toolbar__content {
+		height: 70px !important;
+	}
+	.v-application .text-center {
+		height: 50px;
+		line-height: 50px;
+	}
+	.v-footer.white.v-sheet.v-sheet--tile.theme--light.v-footer--absolute {
+		height: 100px !important;
+	}
+	.v-progress-linear.v-progress-linear--rounded.theme--light {
+		height: 100px !important;
+	}
+
+}
+
+
+
+/* mobile 2 */
+@media all and ( max-width:767px ) {
+	.no-gutters>.col {
+		flex: auto;
+		margin-bottom: 10px;
+	}
+	.time {
+		font-size: 2.5vw;
+	}
+	.f_mname {
+		font-size: 5vw;
+	}
+	.f_p {
+		font-size: 4vw;
+	}
+	.vt {
+		font-size: 4.5vw;
+	}
+	.f_end {
+		font-size: 3.5vw;
+	}
+	.v-sheet.v-sheet--tile.theme--light.v-toolbar.v-toolbar--dense.v-toolbar--flat {
+		height: 60px !important;
+	}
+
+	.v-toolbar__content {
+		height: 60px !important;
+	}
+	.v-application .text-center {
+		height: 40px;
+		line-height: 40px;
+	}
+	.v-footer.white.v-sheet.v-sheet--tile.theme--light.v-footer--absolute {
+		height: 80px !important;
+	}
+	.v-progress-linear.v-progress-linear--rounded.theme--light {
+		height: 80px !important;
+	}
+}
+
+
+/* mobile 1 */
+@media all and ( max-width:480px ) {
+	.f_mname {
+		font-size: 6vw;
+	}
+	.v-application .text-center {
+		height: 30px;
+		line-height: 30px;
+	}
 }
 <!-- CSS 끝 !-->
 </style>
